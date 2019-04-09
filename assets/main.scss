@@ -1,0 +1,17 @@
+---
+---
+
+@import "minima";
+
+figure {
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    figcaption {
+        font-size: small;
+        font-style: italic;
+        text-align: center;
+    }
+}
