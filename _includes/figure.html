@@ -1,0 +1,5 @@
+{% capture imagePath %}{% unless include.name contains '://' %}/assets/images/posts/{{ page.date | date: "%Y-%m-%d" }}-{{ page.id | split: "/" | last }}/{% endunless %}{{ include.name }}{% endcapture %}
+<figure>
+    <img src="{{ imagePath }}" {% if include.alt %} alt="{{ include.alt }}" {% endif %}>
+    <figcaption>{{ include.caption }}</figcaption>
+</figure>
