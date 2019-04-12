@@ -11,6 +11,8 @@ As I was getting ready to head home from work on Friday, I compiled, ran a quick
 
 To my dismay, after pulling up the build, I noticed a dreaded red X in a place where a green checkmark clearly should have been. Curious, I re-compiled and re-ran my unit tests. Nope, all green. Next thing I know, I’m 2 hours into figuring out why the hell my unit tests pass locally but not on the build server. 
 
+<!-- more -->
+
 {% include figure.html name="https://media.giphy.com/media/kHU8W94VS329y/giphy.gif" alt="Level of frustration: high" caption="via GIPHY" %}
 
 ## Show Me the Code
