@@ -4,6 +4,7 @@ title:  "Abusing Reflection for Fun and Profit"
 date: 2019-04-14 20:24:06 -0500
 categories: programming
 tags: dotnet-core c-sharp reflection
+featured-img: Reflection.jpeg
 ---
 There aren't a lot of things that make you feel like more of a badass .NET developer than finding a solid use for reflection. When you're stuck and you have that epiphany moment that you can whip out the perfect tool and solve your problem with a couple simple lines of code, it's a great feeling. Or maybe I just need some better hobbies.
 
