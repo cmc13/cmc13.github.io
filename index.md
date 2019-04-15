@@ -5,4 +5,4 @@
 layout: home
 ---
 
-{% include posts.html %}
+{{ site.time | date_to_rfc822 }}
