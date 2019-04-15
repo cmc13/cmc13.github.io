@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Moq Callbacks: How to Make a Failing Unit Test Look Like it Passes"
-date:   2019-04-02 10:59:49 -0500
+date:   2019-04-02 10:59:49
 categories: programming
 tags: dotnet-core c-sharp moq unit-testing
 featured-img: Testing.png

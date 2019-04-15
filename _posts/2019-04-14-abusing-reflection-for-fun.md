@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Abusing Reflection for Fun and Profit"
-date: 2019-04-14 20:24:06 -0500
+date: 2019-04-14 20:24:06
 categories: programming
 tags: dotnet-core c-sharp reflection
 featured-img: Reflection.jpeg
