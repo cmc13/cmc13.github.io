@@ -14,7 +14,7 @@ There aren't a lot of things that make you feel like more of a badass .NET devel
 
 ## The Problem
 
-I found myself in the situation where I needed to use a library in a way for which it wasn't intended. The library relied heavily on a single abstraction and I wanted to create my own implementation using the same interface. The problem is, implementing the interface required both accessing properties and a constructor that wasn't public. Here's an example of such a scenario.
+I found myself in the situation where I needed to use a library in a way for which it wasn't designed. The library relied heavily on a single abstraction and I wanted to create my own implementation using the same interface. The problem is, implementing the interface required both accessing properties and a constructor that wasn't public. Here's an example of such a scenario.
 
 {% highlight csharp %}
 public interface IRequest
@@ -44,11 +44,19 @@ public class MyCustomRequest : IRequest
 {
     public Message ToMessage()
     {
+        // Get a reference to the constructor using reflection
         var constructor = typeof(Message).GetConstructor(BindingFlags.NonPublic | BindingFlags.Instance,
             null, new Type[0], null);
+
+        // Samesies with the internal property
         var prop = typeof(Message).GetProperty("Prop", BindingFlags.NonPublic | BindingFlags.Instance);
+
+        // Invoke the constructor to instantiate the object
         var msg = (Message)constructor.Invoke(new { });
+
+        // Set the value of the property
         prop.SetValue(msg, "whatever");
+
         return msg;
     }
 
