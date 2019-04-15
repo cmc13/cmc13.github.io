@@ -4,15 +4,16 @@ title:  "Moq Callbacks: How to Make a Failing Unit Test Look Like it Passes"
 date:   2019-04-02 10:59:49 -0500
 categories: programming
 tags: dotnet-core c-sharp moq unit-testing
+featured-img: Testing.png
 ---
+
 As I was getting ready to head home from work on Friday, I compiled, ran a quick smoke test, and verified my unit tests are working. I committed and pushed my changes to the server ~~and went home~~.
 
 To my dismay, after pulling up the build, I noticed a dreaded red X in a place where a green checkmark clearly should have been. Curious, I re-compiled and re-ran my unit tests. Nope, all green. Next thing I know, I’m 2 hours into figuring out why the hell my unit tests pass locally but not on the build server. 
 
-<figure>
-    <img src="https://media.giphy.com/media/kHU8W94VS329y/giphy.gif" alt="Level of frustration: high">
-    <figcaption>via GIPHY</figcaption>
-</figure>
+<!-- more -->
+
+{% include figure.html name="https://media.giphy.com/media/kHU8W94VS329y/giphy.gif" alt="Level of frustration: high" caption="via GIPHY" %}
 
 ## Show Me the Code
 
@@ -67,17 +68,11 @@ One quick note, while I omitted any code to do synchronization between the callb
 
 Seemed like a reasonable test at the time. Little did I know what horrors awaited. So, when I run this test, the expectation would be a failure. Visual Studio, however, reports success.
 
-<figure>
-    <img src="/assets/images/SuccessfulTest.png" alt="&quot;Successful&quot; Unit Tests">
-    <figcaption>Success! Or Not</figcaption>
-</figure>
+{% include figure.html name="SuccessfulTest.png" alt="&quot;Successful&quot; Unit Tests" caption="Success! Or Not" %}
 
 Running the code through debug, however, shows the (expected) failure, but it doesn’t propagate to the Test Explorer:
 
-<figure>
-    <img src="/assets/images/VisualStudioDebugUnitTestCallback.png" alt="Debugging Unit Test">
-    <figcaption>Debugging the “Successful” test</figcaption>
-</figure>
+{% include figure.html name="VisualStudioDebugUnitTestCallback.png" alt="Debugging Unit Test" caption="Debugging the “Successful” test" %}
 
 ## What About the Command Line?
 
@@ -131,10 +126,7 @@ public void TestConstructor_CallbackFunctionIsCalled_CorrectValueIsReturned()
 
 Now my tests fail, which they should in this contrived example:
 
-<figure>
-    <img src="/assets/images/FailingUnitTest.png" alt="Failing Unit Test">
-    <figcaption>Yay! Well, at least it’s doing what it’s supposed to.</figcaption>
-</figure>
+{% include figure.html name="FailingUnitTest.png" alt="Failing Unit Test" caption="Yay! Well, at least it’s doing what it’s supposed to." %}
 
 That’s only half the battle, of course, now I needed to turn the test green. As it turns out, in my case, the test itself was wrong rather than the unit under test. I fixed it, verified that the project now built on the server, and could finally go home for the weekend.
 
