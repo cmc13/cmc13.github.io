@@ -4,5 +4,3 @@
 
 layout: home
 ---
-
-{{ site.email | md5 }}
