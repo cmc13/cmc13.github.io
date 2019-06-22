@@ -40,7 +40,8 @@ public class MyController : ControllerBase
 
         var model = new OutputModel();
 
-        return Created(linkGenerator.GetPathByAction(HttpContext, nameof(Get), values: new { /* route values */ }), model);
+        return Created(linkGenerator.GetPathByAction(HttpContext, nameof(Get),
+            values: new { /* route values */ }), model);
     }
 }
 {% endhighlight %}
@@ -87,8 +88,8 @@ public async Post_HappyPath_ReturnsCreatedStatus()
 
         /* set up mocks */
         /* note that this isn't the same method that I'm calling on the controller.
-            Looking at the source code on github (yay open source), this is the underlying
-            method that needs to be mocked. */
+            Looking at the source code on github (yay open source), this is the
+            underlying method that needs to be mocked. */
         am.Mock<LinkGenerator>().Setup(g => g.GetPathByAddress(It.IsAny<HttpContext>(),
             It.IsAny<RouteValuesAddress>(), It.IsAny<RouteValueDictionary>(),
             It.IsAny<RouteValueDictionary>(), It.IsAny<PathString?>(),
@@ -99,7 +100,10 @@ public async Post_HappyPath_ReturnsCreatedStatus()
         var ctrl = am.Create<MyController>();
         
         /* Also create a dummy HttpContext */
-        ctrl.ControllerContext = new ControllerContext() { HttpContext = new DefaultHttpContext() };
+        ctrl.ControllerContext = new ControllerContext()
+        {
+            HttpContext = new DefaultHttpContext()
+        };
 
         /* Run the action method */
         var response = await ctrl.Post(fixture.Create<InputModel>());
