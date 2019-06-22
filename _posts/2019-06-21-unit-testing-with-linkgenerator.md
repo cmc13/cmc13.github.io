@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Unit Testing with the LinkGenerator Class"
-date:   2019-06-13 12:00:00
+date:   2019-06-21 12:00:00
 categories: programming
 tags: dotnet-core c-sharp linkgenerator unit-testing
 featured-img: www.png
