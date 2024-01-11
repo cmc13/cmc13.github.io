@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Design Decisions in OracleConnection"
-date:   2023-01-11 14:00:00
+date:   2024-01-11 14:00:00
 categories: programming
 tags: dotnet-core c-sharp asp-net-core oracle design
 ---

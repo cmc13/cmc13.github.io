@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Don't Use Try-Catch in Unit Test Code that Throws Exceptions"
-date:   2023-01-11 13:00:00
+date:   2024-01-11 13:00:00
 categories: programming
 tags: dotnet-core c-sharp asp-net-core unit-testing exceptions
 ---
