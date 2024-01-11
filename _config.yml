@@ -19,7 +19,7 @@ email_md5: 097c1bb33249df4b694d05b150920e7f
 description: >- # this means to ignore newlines until "baseurl:"
   Cole Cameron's programming blog.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://colecameron.dev" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://cmc13.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: cmc1985
 github_username:  cmc13
 show_excerpts: true
